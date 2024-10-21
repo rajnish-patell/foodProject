@@ -1,2 +1,1 @@
-# foodProject
-foodProject
+git add .  

@@ -1,0 +1,385 @@
+/* Fonts */
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Amatic SC", sans-serif;
+  --nav-font: "Inter", sans-serif;
+  --background-color: #ffffff;
+  --default-color: #212529;
+  --heading-color: #37373f;
+  --accent-color: #ce1212;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  --nav-color: #7f7f90;
+  --nav-hover-color: #ce1212;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #7f7f90;
+  --nav-dropdown-hover-color: #ce1212;
+  scroll-behavior: smooth;
+}
+
+
+/* Color Presets */
+.light-background {
+  --background-color: #f2f2f2;
+  --surface-color: #ffffff;
+}
+
+
+/* General Styling & Shared Classes */
+
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+
+
+/* Global Header */
+
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 20px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 36px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+  font-family: var(--default-font);
+}
+
+.header .logo span {
+  color: var(--accent-color);
+  font-size: 36px;
+}
+
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 26px;
+  margin: 0;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+
+.scrolled .header {
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Menu */
+
+
+
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 92px;
+  overflow: clip;
+}
+
+
+/* Global Section Titles */
+
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--default-font);
+}
+
+.section-title p {
+  color: var(--heading-color);
+  margin: 10px 0 0 0;
+  font-size: 48px;
+  font-weight: 500;
+  font-family: var(--heading-font);
+}
+
+.section-title p .description-title {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img .feastTop {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+}
+
+.menuItem1{
+  position: absolute;
+  top: 10px;
+  left: 100px;
+}
+
+.menuItem1 img{
+  width: 100px;
+}
+
+
+.menuItem2{
+  position: absolute;
+  top: 10px;
+  right: 10%;
+}
+
+.menuItem2 img{
+  width: 150px;
+}
+
+.hero {
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 5px 0 30px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.hero .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn-get-started:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: var(--default-color);
+  font-weight: 500;
+}
+
+.hero .btn-watch-video i {
+  color: var(--accent-color);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero .btn-watch-video:hover {
+  color: var(--accent-color);
+}
+
+.hero .btn-watch-video:hover i {
+  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* Menu Section */
+
+.menu .nav-tabs {
+  border: 0;
+}
+
+.menu .nav-link {
+  background-color: var(--background-color);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0 15px;
+  padding: 10px 5px;
+  transition: 0.3s;
+  border-radius: 0;
+  cursor: pointer;
+  height: 100%;
+  border: 0;
+  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+
+
+.menu .nav-link i {
+  padding-right: 15px;
+  font-size: 48px;
+}
+
+.menu .nav-link h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  font-family: var(--default-font);
+}
+
+
+.menu .nav-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.menu .nav-link.active {
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.menu .tab-content .tab-header {
+  padding: 30px 0;
+}
+
+.menu .tab-content .tab-header p {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 0;
+}
+
+.menu .tab-content .tab-header h3 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.menu .tab-content .menu-item {
+  text-align-last: center;
+}
+
+.menu .tab-content .menu-item .menu-img {
+  padding: 0 60px;
+  margin-bottom: 15px;
+}
+
+.menu .tab-content .menu-item h4 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-family: var(--default-font);
+}
+
+.menu .tab-content .menu-item .ingredients {
+  font-family: var(--nav-font);
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin-bottom: 5px;
+}
+
+.menu .tab-content .menu-item .price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+
+/* footer */
+footer {
+  background-color: #181818;
+  color: #fff;
+}
+
+footer h1 {
+  color: #fff;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
